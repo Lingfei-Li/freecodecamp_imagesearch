@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timestamp</title>
+
+    <!--Bootstrap-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <!--Bootswatch-->
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1> Image Search Microservice </h1>
+
+    <blockquote style="display: inline-block;">
+        <h3>User Stories:</h3>
+        <ol>
+            <li>
+                I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+            </li>
+            <li>
+                I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+            </li>
+            <li>
+                I can get a list of the most recently submitted search strings.
+            </li>
+        </ol>
+    </blockquote>
+
+    <div>
+        <p>Endpoints:</p>
+        <ul>
+            <li>
+                Query endpoint: <code> /query/:queryString </code>
+                <ul>
+                    <li>
+                        Search for images with keyword "lolcat"
+                        <code> https://lingfei-imagesearch.herokuapp.com/query/lolcat </code>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                History endpoint: <code>/history</code>
+            <ul>
+                <li>
+                    Look at all search history:
+                    <code> https://lingfei-imagesearch.herokuapp.com/history </code>
+                </li>
+                <li>
+                    Delete history with id = &lt;id&gt;: send DELETE request to
+                    <code> https://lingfei-imagesearch.herokuapp.com/history/&lt;id&gt;</code>
+                </li>
+                <li>
+                    Delete all history send DELETE request to
+                    <code> https://lingfei-imagesearch.herokuapp.com/history/</code>
+                </li>
+            </ul>
+            </li>
+        </ul>
+
+    </div>
+
+
+
+</div>
+
+</body>
+</html>

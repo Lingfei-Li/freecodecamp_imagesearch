@@ -21,3 +21,11 @@ module.exports.getAllHistory = (callback)=>{
 module.exports.addHistory = (history, callback) => {
     History.create(history, callback);
 };
+
+module.exports.deleteHistoryById = (_id, callback) => {
+    History.find({_id}).remove(callback);
+};
+
+module.exports.deleteAllHistory = (callback) => {
+    History.find().remove(callback);
+};
